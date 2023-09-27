@@ -1,0 +1,17 @@
+name: hello-world
+on: push
+jobs:
+  my-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: my-step
+        run: echo "Hello World!"
+      - uses: cardinalby/export-env-action@v1
+        with:
+          envFile: 'constants.env'    
+          expand: 'true'
+      
+      # env.PROTOCOL == 'https'
+      # env.HOST == 'example.com'
+      # env.PORT == '8080'
+      # env.URI == 'https://example.com:8080'
