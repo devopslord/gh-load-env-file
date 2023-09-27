@@ -10,7 +10,7 @@ jobs:
             echo "Hello World!"
       - uses: cardinalby/export-env-action@v1
         with:
-          envFile: 'constants.env'    
+          envFile: '/home/runner/work/gh-load-env-file/gh-load-env-file/constants.env'    
           expand: 'true'
       
       # env.PROTOCOL == 'https'
