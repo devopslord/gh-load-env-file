@@ -15,7 +15,7 @@ jobs:
       - name: Read environment file and set variables
         uses: falti/dotenv-action@v1.0.4 #cosq-network/dotenv-loader@v1.0.2
         with:
-          env-file: ./environments/case.env
+          path: ./environments/case.env
 
       - name: Some other action
         run: |
