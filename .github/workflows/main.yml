@@ -18,7 +18,7 @@ jobs:
 
       - name: Some other action
         run: |
-            echo "HELLO Variable: ${{ env.FIXTURES_4 }}"
+            echo "HELLO Variable: ${{ env.fixtures_5 }}"
       
   test:
     runs-on: ubuntu-latest
