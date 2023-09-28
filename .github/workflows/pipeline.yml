@@ -15,5 +15,5 @@ jobs:
       - name: Read environment file and set variables
         uses: cosq-network/dotenv-loader@v1.0.2
         with:
-          env-file: .env
+          env-file: ./environments/case.env
           
