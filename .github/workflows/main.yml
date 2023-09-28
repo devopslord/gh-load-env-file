@@ -13,10 +13,9 @@ jobs:
         uses: natterstefan/action-next-env@v1
         with:
             path: . # optional, default: .
-            environment: development
-            run: |
-            echo "HELLO Variable: ${{ env.FIXTURES_4 }}"
-          
+            #environment: development
+            
+
       - name: Some other action
         run: |
             echo "HELLO Variable: ${{ env.FIXTURES_4 }}"
