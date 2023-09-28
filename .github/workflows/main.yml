@@ -8,23 +8,17 @@ jobs:
         run: |
             pwd
             echo "Hello World!"
-            
-      - name: Load .env file
-        uses: xom9ikk/dotenv@v2
-      - uses: ./
-        with:
-            path: ./environments/env
-            #mode: development
-            #load-mode: strict
 
+      - name: Load .env file
+        uses: natterstefan/action-next-env@v1
+        with:
+            path: ./environments/env # optional, default: .
+            environment: development
+          
       - name: Some other action
         run: |
-            echo "Variable 1: ${{ env.FIXTURES_4 }}"
-            echo "Variable 2: ${{ env.FIXTURES_5 }}"
-            echo "Variable 3: ${{ env.FIXTURES_6 }}"
-  
-            # test action works running from the 
-
+            echo "HELLO Variable: ${{ env.HELLO }}"
+      
   test:
     runs-on: ubuntu-latest
     steps:
