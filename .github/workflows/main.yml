@@ -13,6 +13,10 @@ jobs:
         uses: natterstefan/action-next-env@v1
         with:
             path: ./environments/env # optional, default: .
+      - run: |
+            echo "lower: $fixtures_5"
+            echo "upper: $fixtures_6"
+            #echo "bypass: $Fixtures_6"
             #environment: development
             
 
