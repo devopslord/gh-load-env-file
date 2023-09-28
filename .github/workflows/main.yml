@@ -12,7 +12,7 @@ jobs:
       - name: Load .env file
         uses: natterstefan/action-next-env@v1
         with:
-            path: ./environments/env # optional, default: .
+            path: . # optional, default: .
             environment: development
           
       - name: Some other action
