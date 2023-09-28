@@ -37,9 +37,9 @@ jobs:
         uses: mrtkrcm/dotenv-flow-action@v2.3.0
         with:
           path: ./environments/case.env
-          export-variables: true
+          #export-variables: true
           log-variables: true
-          keys-case: bypass
+          #keys-case: bypass
       - run:  |
               echo "HELLO Variable: $API_KEY "
               echo "Db variable : $DB_PASSWORD "
