@@ -16,4 +16,9 @@ jobs:
         uses: cosq-network/dotenv-loader@v1.0.2
         with:
           env-file: ./environments/case.env
+
+      - name: Some other action
+        run: |
+            echo "HELLO Variable: $API_KEY "
+        
           
