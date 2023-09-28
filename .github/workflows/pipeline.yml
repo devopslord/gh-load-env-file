@@ -16,6 +16,12 @@ jobs:
         uses: falti/dotenv-action@v1.0.4 #cosq-network/dotenv-loader@v1.0.2
         with:
           path: ./environments/case.env
+          export-variables: true
+          log-variables: true
+          keys-case: bypass
+      - run:  |
+            echo "HELLO Variable: $API_KEY "
+            echo "Db variable : $DB_PASSWORD "
 
       - name: Some other action
         run: |
