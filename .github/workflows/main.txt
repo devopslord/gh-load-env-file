@@ -1,0 +1,45 @@
+name: hello-world
+on: push
+jobs:
+  my-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: my-step
+        run: |
+            pwd
+            echo "Hello World!"
+
+      - name: Load .env file
+        uses: natterstefan/action-next-env@v1
+        with:
+            path: ./environments/env # optional, default: .
+      - run: |
+            echo "lower: $fixtures_5"
+            echo "upper: $fixtures_6"
+            #echo "bypass: $Fixtures_6"
+            #environment: development
+            
+      - name: Load environment variables
+        uses: xom9ikk/dotenv@v2
+        with:
+          path: .
+          mode: 
+          load-mode: strict
+          run: echo "Host -> $API_KEY"
+
+      - name: Some other action
+        run: |
+            echo "HELLO Variable: $API_KEY "
+      
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: ./
+        with:
+          path: ./environments/case.env
+          
+      # env.PROTOCOL == 'https'
+      # env.HOST == 'example.com'
+      # env.PORT == '8080'
+      # env.URI == 'https://example.com:8080'

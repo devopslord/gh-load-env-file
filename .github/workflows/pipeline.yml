@@ -1,0 +1,19 @@
+name: Read Environment File Example
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  read_env:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Read environment file and set variables
+        uses: cosq-network/dotenv-loader@v1.0.2
+        with:
+          env-file: .env
+          
