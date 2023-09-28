@@ -20,15 +20,16 @@ jobs:
             #environment: development
             
       - name: Load environment variables
-        uses: dotenv-actions/setup-dotenv@v2
+        uses: xom9ikk/dotenv@v2
         with:
-            node-version: 16
-            dotenv_path: .env
-            run: echo "Host -> $API_KEY"
+          path: .env
+          mode: development
+          load-mode: strict
+          run: echo "Host -> $API_KEY"
 
       - name: Some other action
         run: |
-            echo "HELLO Variable: ${{ env.fixtures_5 }}"
+            echo "HELLO Variable: $API_KEY "
       
   test:
     runs-on: ubuntu-latest
