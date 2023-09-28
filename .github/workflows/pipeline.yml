@@ -20,5 +20,6 @@ jobs:
       - name: Some other action
         run: |
             echo "HELLO Variable: $API_KEY "
+            echo "Db variable : $DB_PASSWORD "
         
           
