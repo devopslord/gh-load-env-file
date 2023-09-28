@@ -11,8 +11,9 @@ jobs:
 
       - name: Load .env file
         uses: natterstefan/action-next-env@v1
+      - uses: ./
         with:
-            path: . # optional, default: .
+            path: ./environments/case.env # optional, default: .
             #environment: development
             
 
