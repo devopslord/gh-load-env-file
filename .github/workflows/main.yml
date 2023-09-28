@@ -19,6 +19,11 @@ jobs:
             #echo "bypass: $Fixtures_6"
             #environment: development
             
+      - name: Load environment variables
+        uses: dotenv-actions/setup-dotenv@v2
+        with:
+            dotenv_path: .env
+            run: echo "Host -> $API_KEY"
 
       - name: Some other action
         run: |
