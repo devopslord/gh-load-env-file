@@ -12,26 +12,26 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Read environment file and set variables
-        uses: cosq-network/dotenv-loader@v1.0.2
-        with:
-          env-file: ./environments/case.env
+      # - name: Read environment file and set variables
+      #   uses: cosq-network/dotenv-loader@v1.0.2
+      #   with:
+      #     env-file: ./environments/case.env
 
-      - name: Some other action
-        run: |
-            echo "HELLO Variable: $API_KEY "
-            echo "Db variable : $DB_PASSWORD "
+      # - name: Some other action
+      #   run: |
+      #       echo "HELLO Variable: $API_KEY "
+      #       echo "Db variable : $DB_PASSWORD "
 
-      - name: Read environment file and set variables
-        uses: falti/dotenv-action@v1.0.4 #cosq-network/dotenv-loader@v1.0.2
-        with:
-          path: ./environments/case.env
-          export-variables: true
-          log-variables: true
-          keys-case: bypass
-      - run:  |
-              echo "HELLO Variable: $API_KEY "
-              echo "Db variable : $DB_PASSWORD "
+      # - name: Read environment file and set variables
+      #   uses: falti/dotenv-action@v1.0.4 #cosq-network/dotenv-loader@v1.0.2
+      #   with:
+      #     path: ./environments/case.env
+      #     export-variables: true
+      #     log-variables: true
+      #     keys-case: bypass
+      # - run:  |
+      #         echo "HELLO Variable: $API_KEY "
+      #         echo "Db variable : $DB_PASSWORD "
 
       - name: Dotenv Flow Action
         uses: mrtkrcm/dotenv-flow-action@v2.3.0
